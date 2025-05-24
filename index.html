@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Mangaer Pro</title>
+    <link rel="icon" type="image/x-icon" href="./imgsource/images.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3b7f857ba5.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="logoContainer">
+        <h1 id="logo">Task Manager Pro</h1>
+    </div>
+    <div id="progressionBar">
+        <div id="progressionStatusBarContainer">
+            <div id="progressionStatusBar"></div>
+        </div>
+        <div id="progression"></div>
+    </div>
+    <div id="container" class="container">
+        <form onsubmit="event.preventDefault()" id="taskInputContainer">
+            <textarea id="userInputTaskContent" placeholder="Add new task" rows="1"></textarea>
+            <input type="datetime-local" id="userInputTaskDeadline" onchange="setDeadline()">
+            <button id="addTaskBtn" onclick="addTask()">Add Task</button>
+        </form>
+        <div id="accessoriesContainer">
+            <form onsubmit="event.preventDefault()" id="filterContainer">
+                <select id="filter" onchange="lightRefresh()">
+                    <option value="all">All</option>
+                    <option value="done">Done tasks</option>
+                    <option value="undone">Undone task</option>
+                </select>
+                <input type="text" id="addGroupInput" placeholder="New group">
+                <button id="addGroup" onclick="addNewGroup()" value="add-group">Add Group</button>
+                <button id="removeGroupBtn" onclick="removeGroup()">Remove group</button>
+            </form>
+            <div id="searchContainer">
+                <input type="text" placeholder='Search' id="searchInput">
+                <button onclick="switchTheme()" id="switchThemeBtn">
+                    <div></div>
+                </button>
+            </div>
+        </div>
+        <ul id="taskContainer"></ul>
+    </div>
+    <div id="inspirationalQuoteContainer">
+        <div id="inspirationalQuote"></div>
+    </div>
+    <div id="onlineStatusDisplay">
+        <audio id="audioSrc">
+            <source src="./soundEffect/pop-268648.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
