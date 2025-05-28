@@ -1,20 +1,3 @@
-// bug: fix search bar issues of not updateing whenever stop searching
-// bug: reload list whenever interacting (check list, delete, set date time) -> optimizing to make it only react with the target element
-// solution: add className to the filtered tasks inorder to hide it in live time (using CSS) -> no reload / half done 
-// add new task to the top of the list
-// pop up description whenever hover the functional button
-// when adding task to group mode on keep the status of the button
-// solution when in responsive hide button with css
-//add title for every task
-
-// instead of deleting and creating new element from list create a function to hide element with CSS which still keep the previous status of the task but not having to hard reload it
-// 2 function: 1 hard reload + 1 refresh1 (done)
-
-// add status bar using css width based on the checked list lenght
-// add an alert notification if deadline comes
-
-// when choose task to add in group, only display the ones that doesn't appear in the current group 
-
 const body = document.querySelector("body")
 const container = document.getElementById("container")
 const userInputTaskContent = document.getElementById("userInputTaskContent")
