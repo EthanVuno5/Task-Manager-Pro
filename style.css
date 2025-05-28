@@ -487,6 +487,7 @@ textarea {
     color: black;
     cursor: inherit;
     transition: min-height 0.2s;
+    resize: none;
 }
 
 .taskContentDOM.showFullContent {
@@ -494,12 +495,12 @@ textarea {
 }
 
 .taskContentDOM::-webkit-scrollbar {
-    width: 0px;
-    background-color: transparent;
+    width: 5px;
 }
 
-.taskContentDOM::-webkit-scrollbar-corner {
-    background-color: transparent;
+.taskContentDOM::-webkit-scrollbar-thumb {
+    background-color: #0066ec;
+    border-radius: 50px;
 }
 
 .task .btn.addTaskToGroupBtn{
