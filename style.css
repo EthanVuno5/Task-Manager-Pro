@@ -149,7 +149,7 @@ textarea {
 }
 
 .dark .task:hover .btn {
-    color: #fff;
+    color: #ffffff;
 }
 
 .dark .task #deadlineStatus {
@@ -423,25 +423,60 @@ textarea {
     color: #fff;
 }
 
+.task.checked #deadlineStatus {
+    color: #fff;
+}
+
 .task.checked .btn {
     color: #fff;
 }
 
+.task.checked .btn:hover {
+    color: #004368;
+}
+
 .task.finishedOnTime {
-    background-color: rgb(54, 255, 97);
+    background-color: rgba(0, 230, 50, 0.705);
 }
 
 .task.unfinishedOnTime {
-    background-color: rgb(255, 30, 30);
+    background-color: rgb(252, 53, 53);
+}
+
+.task.unfinishedOnTime #deadlineStatus {
+    color: #fff;
+}
+
+.task.unfinishedOnTime .btn {
+    color: #fff;
+}
+
+.task.unfinishedOnTime .btn:hover {
+    color: #004368;
 }
 
 .task.deadlineAlertBackGroundChange {
-    background-color: rgb(255, 238, 0);
+    background-color: rgb(235, 219, 0);
 }
 
+.task.deadlineAlertBackGroundChange:hover .btn {
+    color: #007ab3;
+}
+
+.task.deadlineAlertBackGroundChange .btn:hover {
+    color: #5da2fc;
+}
+
+.task.deadlineAlertBackGroundChange .btn {
+    color: rgb(105, 105, 105);
+}
+
+.task.deadlineAlertBackGroundChange #deadlineStatus {
+    color: rgb(105, 105, 105);
+}
 
 .dark .task.checked.finishedOnTime {
-    background-color: rgb(0, 255, 55);
+    background-color: rgba(54, 255, 98, 0.705);
 }
 
 .dark .task.unfinishedOnTime {
@@ -449,7 +484,11 @@ textarea {
 }
 
 .dark .task.deadlineAlertBackGroundChange {
-    background-color: rgb(255, 238, 0);
+    background-color: rgb(255, 243, 82);
+}
+
+.dark .task.deadlineAlertBackGroundChange #deadlineStatus{
+    color: #002b4e;
 }
 
 .btn.dragBtn {
@@ -503,22 +542,24 @@ textarea {
     border-radius: 50px;
 }
 
-.task .btn.addTaskToGroupBtn{
+.task .btn.addTaskToGroupBtn {
     width: fit-content;
     animation: addTaskToGroupBtnShow 0.2s 1;
     padding: 10px;
 }
 
 @keyframes addTaskToGroupBtnShow {
-    0%{
+    0% {
         opacity: 0;
         width: 0;
     }
-    50%{
+
+    50% {
         opacity: 0.5;
         width: 50px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         width: fit-content;
     }
@@ -582,16 +623,18 @@ textarea {
     animation: onlineStatusDisplay 0.2s ease-in 1;
 }
 
-@keyframes onlineStatusDisplay{
-    0%{
+@keyframes onlineStatusDisplay {
+    0% {
         right: -50px;
         opacity: 0;
     }
-    50%{
+
+    50% {
         opacity: 0.5;
         right: -10px;
     }
-    100%{
+
+    100% {
         opacity: 1;
         right: 10px;
     }

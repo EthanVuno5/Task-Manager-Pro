@@ -249,6 +249,7 @@ function randomIDs(arr) {
 function addTask() {
     if (userInputTaskContent.value === "") {
         alert("You can not leave it empty")
+        userInputTaskDeadline.value = ""
         return 0;
     }
     let Ids = getIds();
