@@ -599,7 +599,7 @@ searchInput.addEventListener("input", searchTask)
 filter.addEventListener("change", searchTask)
 // progression bar
 function updateProgression() {
-    let progressionPercentage = (taskList.filter(task => task.checked === true).length / taskList.length) * 100
+    let progressionPercentage = (taskList.length === 0) ? 0 : (taskList.filter(task => task.checked === true).length / taskList.length) * 100
     progression.innerHTML = Math.round(progressionPercentage) + "%"
     progressionStatusBar.style.width = progressionPercentage + "%"
 }
